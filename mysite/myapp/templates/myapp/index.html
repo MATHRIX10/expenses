@@ -1,0 +1,86 @@
+{% extends 'myapp/base.html'%}
+
+{% block body %}
+
+<h1>this is the home page haha</h1>
+
+<form method="POST" class="shadow-lg m-10 rounded-lg">
+
+  {% csrf_token %}
+    <div class="form-container flex space-x-10 flex-wrap   px-10 pt-10 pb-10">
+        <div>
+        
+            <div class='mb-5'>
+                <label>Expense Name</label>
+            </div>
+
+            <div class ="border ">
+
+                {{expense_form.name}}
+        
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+        <div>
+        
+            <div class='mb-5'>
+                <label>Expense amount</label>
+            </div>
+
+            <div class ="border ">
+
+                {{expense_form.amount}}
+        
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+        <div>
+        
+            <div class='mb-5'>
+                <label>Expense category</label>
+            </div>
+
+            <div class ="border ">
+
+                {{expense_form.category}}
+        
+            </div>
+
+
+
+
+        </div>
+
+    
+
+     <div class="mx-10">
+        <button class="bg-green-500 px-5 m-10 py-2 rounded-lg text-white">Add</button>
+    </div>
+
+
+        
+    
+    </div>
+
+   
+
+  
+  
+</form>
+{% endblock %}
